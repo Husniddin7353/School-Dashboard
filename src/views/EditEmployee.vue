@@ -78,16 +78,20 @@ export default {
   async created() {
     await this.$store.dispatch('LOAD_FROM_LOCALSTORAGE')
     let index = this.$route.params.index
-    if (!/^\d+$/.test(index)) {
-      return this.$router.push('/EditEmployee/:index')
-    }
+
+
+
+
+    // if (!/^\d+$/.test(index)) {
+    //   return this.$router.push('${index}/EditEmployee')
+    // }
     index = parseInt(index)
     const items = this.$store.state.students.items
     const item = items[index]
-    if (!item) {
-      return this.$router.push('/EditEmployee/:index')
-    }
-    this.form = Object.assign({}, item)
+    // if (!item) {
+    //   return this.$router.push('${index}/EditEmployee')
+    // }
+    // this.form = Object.assign({}, item)
   },
   methods: {
     clearForm() {

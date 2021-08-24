@@ -43,13 +43,13 @@ const routes = [
   // },
 
   {
-    path: "/AddEmployee/:id",
+    path: "/AddEmployee/:index",
     name: "AddEmployee",
     component: () => import("../views/AddEmployee.vue"),
   },
 
   {
-    path: "/EditEmployee/:index",
+    path: "/employees/:index/EditEmployee",
     name: "EditEmployee",
     component: () => import("../views/EditEmployee.vue"),
   },

@@ -12,7 +12,7 @@
               <th>Activity</th>
               <th></th>
           </tr>
-
+          
           <tr class="table-row" v-for="(student, index) in students" :key="index">
             <td>{{ index + 1}}</td>
             <td>{{student.firstName}}</td>
@@ -24,7 +24,7 @@
             <td>
               <div class="table__row-icon">
                 <span v-html="remove" @click="removeOneUser(index)"></span>
-                <span v-html="edit" @click="$router.push('/EditEmployee/:index')"></span>
+                <router-link  v-html="edit"  :to="`employees/${index}/EditEmployee`"></router-link>
               </div>
             </td>
             
